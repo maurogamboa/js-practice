@@ -18,4 +18,4 @@ import "./styles.css";
  - Se debe agregar un evento (event listener) del tipo 'click' 
    en los botones de cada producto
  - Se debe crear un funcion para manejar los eventos
-*/
+*/ const xxx = 100;
