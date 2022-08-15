@@ -19,7 +19,3 @@ import "./styles.css";
    en los botones de cada producto
  - Se debe crear un funcion para manejar los eventos
 */
-
-//Ejemplo para obtener el nombre del primer producto
-const nombreProducto1 = obtenerNombreProducto("producto-1");
-console.log("nombre:", nombreProducto1);
