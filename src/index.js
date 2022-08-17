@@ -1,4 +1,9 @@
-import { obtenerNombreProducto } from "./productos";
+//import { obtenerNombreProducto } from "./productos";
+import { obtenerBotonComprar } from "./productos";
+import { agregarProducto1 } from "./carrito";
+import { agregarProducto2 } from "./carrito";
+import { agregarProducto3 } from "./carrito";
+import { agregarProducto4 } from "./carrito";
 import "./styles.css";
 
 /* 
@@ -21,5 +26,30 @@ import "./styles.css";
 */
 
 //Ejemplo para obtener el nombre del primer producto
-const nombreProducto1 = obtenerNombreProducto("producto-1");
-console.log("nombre:", nombreProducto1);
+//const nombreProducto1 = obtenerNombreProducto("producto-1");
+//console.log("nombre:", nombreProducto1);
+
+function clickBoton1() {
+  agregarProducto1();
+}
+function clickBoton2() {
+  agregarProducto2();
+}
+function clickBoton3() {
+  agregarProducto3();
+}
+function clickBoton4() {
+  agregarProducto4();
+}
+
+const botonUno = obtenerBotonComprar("producto-1");
+botonUno.addEventListener("click", clickBoton1);
+
+const botonDos = obtenerBotonComprar("producto-2");
+botonDos.addEventListener("click", clickBoton2);
+
+const botonTres = obtenerBotonComprar("producto-3");
+botonTres.addEventListener("click", clickBoton3);
+
+const botonCuatro = obtenerBotonComprar("producto-4");
+botonCuatro.addEventListener("click", clickBoton4);
