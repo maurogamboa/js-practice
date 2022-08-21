@@ -1,9 +1,6 @@
 //import { obtenerNombreProducto } from "./productos";
 import { obtenerBotonComprar } from "./productos";
-import { agregarProducto1 } from "./carrito";
-import { agregarProducto2 } from "./carrito";
-import { agregarProducto3 } from "./carrito";
-import { agregarProducto4 } from "./carrito";
+import { agregarProducto } from "./carrito";
 import "./styles.css";
 
 /* 
@@ -30,16 +27,16 @@ import "./styles.css";
 //console.log("nombre:", nombreProducto1);
 
 function clickBoton1() {
-  agregarProducto1();
+  agregarProducto("producto-1");
 }
 function clickBoton2() {
-  agregarProducto2();
+  agregarProducto("producto-2");
 }
 function clickBoton3() {
-  agregarProducto3();
+  agregarProducto("producto-3");
 }
 function clickBoton4() {
-  agregarProducto4();
+  agregarProducto("producto-4");
 }
 
 const botonUno = obtenerBotonComprar("producto-1");
