@@ -1,29 +1,36 @@
-//import { obtenerNombreProducto } from "./productos";
-import { obtenerBotonComprar } from "./productos";
-import { agregarProducto } from "./carrito";
 import "./styles.css";
 
-function clickBoton1() {
-  agregarProducto("producto-1");
+const listaProductos = [
+  {
+    titulo: "Pantalon Magali Talla XXL",
+  },
+  {
+    titulo: "Medias Deportivas Adaidasas",
+  },
+];
+
+const productContainer = document.getElementById("listaProductos");
+
+function renderizarProductos(producto) {
+  const newDiv = document.createElement("div");
+
+  const nombreProducto = document.createElement("span");
+  const comprar = document.createElement("button");
+
+  const textNombreProducto = document.createTextNode(producto.titulo);
+  nombreProducto.appendChild(textNombreProducto);
+
+  comprar.textContent = "Comprar";
+
+  newDiv.appendChild(nombreProducto);
+  newDiv.appendChild(comprar);
+
+  productContainer.appendChild(newDiv);
 }
-function clickBoton2() {
-  agregarProducto("producto-2");
-}
-function clickBoton3() {
-  agregarProducto("producto-3");
-}
-function clickBoton4() {
-  agregarProducto("producto-4");
+listaProductos.forEach(renderizarProductos);
+
+function cargarWin() {
+  renderizarProductos();
 }
 
-const botonUno = obtenerBotonComprar("producto-1");
-botonUno.addEventListener("click", clickBoton1);
-
-const botonDos = obtenerBotonComprar("producto-2");
-botonDos.addEventListener("click", clickBoton2);
-
-const botonTres = obtenerBotonComprar("producto-3");
-botonTres.addEventListener("click", clickBoton3);
-
-const botonCuatro = obtenerBotonComprar("producto-4");
-botonCuatro.addEventListener("click", clickBoton4);
+window.onload = cargarWin;
