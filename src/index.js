@@ -51,3 +51,5 @@ botonTres.addEventListener("click", clickBoton3);
 
 const botonCuatro = obtenerBotonComprar("producto-4");
 botonCuatro.addEventListener("click", clickBoton4);
+
+//Prueba
