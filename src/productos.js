@@ -4,7 +4,10 @@
  */
 export function obtenerNombreProducto(idProducto) {
   const producto = document.getElementById(idProducto);
-  return producto.children[0].textContent;
+  //return producto.children[1].textContent;
+  const span = producto.children[0];
+  const nombreProducto = span.textContent;
+  return nombreProducto;
 }
 
 /**
@@ -13,4 +16,6 @@ export function obtenerNombreProducto(idProducto) {
  */
 export function obtenerBotonComprar(idProducto) {
   //Pendiente por hacer...
+  const product = document.getElementById(idProducto);
+  return product.children[1];
 }
