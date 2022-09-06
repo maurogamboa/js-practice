@@ -27,10 +27,9 @@ function renderizarProductos(producto) {
 
   productContainer.appendChild(newDiv);
 }
-listaProductos.forEach(renderizarProductos);
 
 function cargarWin() {
-  renderizarProductos();
+  listaProductos.forEach(renderizarProductos);
 }
 
 window.onload = cargarWin;
