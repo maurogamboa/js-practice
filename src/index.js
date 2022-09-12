@@ -1,3 +1,4 @@
+import { renderizarProducto } from "./productos";
 import "./styles.css";
 
 const listaProductos = [
@@ -9,27 +10,9 @@ const listaProductos = [
   },
 ];
 
-const productContainer = document.getElementById("listaProductos");
-
-function renderizarProductos(producto) {
-  const newDiv = document.createElement("div");
-
-  const nombreProducto = document.createElement("span");
-  const comprar = document.createElement("button");
-
-  const textNombreProducto = document.createTextNode(producto.titulo);
-  nombreProducto.appendChild(textNombreProducto);
-
-  comprar.textContent = "Comprar";
-
-  newDiv.appendChild(nombreProducto);
-  newDiv.appendChild(comprar);
-
-  productContainer.appendChild(newDiv);
-}
 
 function cargarWin() {
-  listaProductos.forEach(renderizarProductos);
+  listaProductos.forEach(renderizarProducto);
 }
 
 window.onload = cargarWin;

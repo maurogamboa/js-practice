@@ -19,3 +19,22 @@ export function obtenerBotonComprar(idProducto) {
   const product = document.getElementById(idProducto);
   return product.children[1];
 }
+
+const productContainer = document.getElementById("listaProductos");
+
+export function renderizarProducto(producto) {
+  const newDiv = document.createElement("div");
+
+  const nombreProducto = document.createElement("span");
+  const comprar = document.createElement("button");
+
+  const textNombreProducto = document.createTextNode(producto.titulo);
+  nombreProducto.appendChild(textNombreProducto);
+
+  comprar.textContent = "Comprar";
+
+  newDiv.appendChild(nombreProducto);
+  newDiv.appendChild(comprar);
+
+  productContainer.appendChild(newDiv);
+}
