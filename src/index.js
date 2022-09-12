@@ -10,7 +10,6 @@ const listaProductos = [
   },
 ];
 
-
 function cargarWin() {
   listaProductos.forEach(renderizarProducto);
 }
