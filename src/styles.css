@@ -8,14 +8,14 @@ body {
   gap: 8px;
 }
 
-#lista-productos {
+#listaProductos {
   display: flex;
   gap: 12px;
   justify-content: space-between;
   align-items: stretch;
 }
 
-#lista-productos div {
+#listaProductos div {
   display: flex;
   flex-flow: column wrap;
   border: 1px solid gray;
@@ -23,6 +23,6 @@ body {
   gap: 6px;
 }
 
-#lista-productos div span {
+#listaProductos div span {
   flex: 1;
 }

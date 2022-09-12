@@ -5,8 +5,6 @@ import { obtenerNombreProducto } from "./productos";
  */
 
 export function agregarProducto(nombredelProducto) {
-  //let product = document.getElementById("producto-1");
-  //let hijo0 = product.children[0];
   let textHijo = obtenerNombreProducto(nombredelProducto);
 
   let nuevoSpan = document.createElement("p");
